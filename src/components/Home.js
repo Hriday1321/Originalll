@@ -5,8 +5,8 @@ function Home() {
   if(page == '0') {
     return (
       <div className="Home">
-          <button onClick={setPage('1')}>Make word</button>
-          <button onClick={setPage('2')}>Guess word</button>
+          <button >Make word</button>
+          <button >Guess word</button>
       </div>
     );}
   else if(page == '1') {
