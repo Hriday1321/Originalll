@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function Home() {
     return (
       <div className="Home">
-          <button >Make word</button>
-          <button >Guess word</button>
+          <Link to={'/make'}>Make word</Link>
+          <Link to={'/guess'}>Guess word</Link>
       </div>
     )
 }
