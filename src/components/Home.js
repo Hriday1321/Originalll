@@ -1,14 +1,9 @@
-import { Link } from "react-router-dom";
+import Nav from './Nav'
 
 function Home(props) {
     return (
       <div className="Home">
-        <div className="make">
-          <Link to={'/make'}>Make word</Link>
-        </div>
-        <div className="guess">
-          <Link to={'/guess'}>Guess word</Link>  
-        </div>
+        <Nav />
         {props.words}
       </div>
     )
