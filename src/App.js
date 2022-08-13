@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route index element={<Home words = {words}/>} />
         <Route path="/make" element={<Make {...props}/>} />
-        <Route path="/guess" element={<Guess />} />
+        <Route path="/guess" element={<Guess words = {words} />} />
       </Routes>  
       );
 }
