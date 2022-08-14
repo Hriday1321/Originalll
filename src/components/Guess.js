@@ -4,6 +4,8 @@ import Nav from './Nav'
 export default function Guess(props) {
   const [word, makeWord] = React.useState('initial');
   const [g, makeg] = React.useState(0);
+  const [y, makey] = React.useState(0);
+
   const compare = () => {
     let arr = [0, 0, 0, 0, 0];
     let count = 0
@@ -12,10 +14,24 @@ export default function Guess(props) {
         arr[i] = 1;
         count++;
       }
-    makeg(count)
+
+    makeg(count);
+    count = 0;
+    let barr = arr;
+
     for(let i = 0; i < 5; i++){
-      for(let j = 0; j < 5; j++){}
+      if(arr[i] === 0)
+        for(let j = 0; j < 5; j++){
+          if(barr[j] === 0 && word[i] === props.words[j]){
+            barr[j] = 1;
+            arr[i] = 1;
+            count++;
+          }
+        }
     }
+
+    makey(count);
+    count = 0;
   }
 
   return (
@@ -24,7 +40,8 @@ export default function Guess(props) {
       <input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></input>
       <button onClick={() => {compare()}}>Submit</button>
       {word} <br />
-      {g}
+      {g} <br />
+      {y}
     </div>
   )
 }
