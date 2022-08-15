@@ -17,14 +17,13 @@ export default function Guess(props) {
 
     makeg(count);
     count = 0;
-    let barr = arr;
+    let barr = [...arr];
 
     for(let i = 0; i < 5; i++){
       if(arr[i] === 0)
         for(let j = 0; j < 5; j++){
           if(barr[j] === 0 && word[i] === props.words[j]){
             barr[j] = 1;
-            arr[i] = 1;
             count++;
           }
         }
