@@ -14,7 +14,7 @@ export default function Guess(props) {
         arr[i] = 1;
         count++;
       }
-
+    
     makeg(count);
     count = 0;
     let barr = [...arr];
