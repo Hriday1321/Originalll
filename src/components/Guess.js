@@ -1,5 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
+import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
+import {db} from './firebase'
 
 export default function Guess(props) {
   const [word, makeWord] = React.useState('initial');
@@ -10,7 +12,7 @@ export default function Guess(props) {
     let arr = [0, 0, 0, 0, 0];
     let count = 0
     for(let i = 0; i < 5; i++)
-      if(word[i] === props.words[i]){
+      if(word[i] === words[0].word[i]){
         arr[i] = 1;
         count++;
       }
@@ -22,7 +24,7 @@ export default function Guess(props) {
     for(let i = 0; i < 5; i++){
       if(arr[i] === 0)
         for(let j = 0; j < 5; j++){
-          if(barr[j] === 0 && word[i] === props.words[j]){
+          if(barr[j] === 0 && word[i] === words[0].word[j]){
             barr[j] = 1;
             count++;
           }
@@ -33,12 +35,25 @@ export default function Guess(props) {
     count = 0;
   }
 
+  const [words, setWords] = React.useState([])
+
+  React.useEffect(() => {
+    const q = query(collection(db, 'words'), orderBy('created', 'desc'))
+    onSnapshot(q, (querySnapshot) => {
+      setWords(querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        data: doc.data()
+      })))
+    })
+  },[])
+
   return (
     <div className='guess'>
       <Nav />
       <input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></input>
       <button onClick={() => {compare()}}>Submit</button>
       {word} <br />
+      {words.map((w) => (w.word))}
       {g} <br />
       {y}
     </div>
