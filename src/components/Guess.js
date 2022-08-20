@@ -53,7 +53,6 @@ export default function Guess(props) {
       <input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></input>
       <button onClick={() => {compare()}}>Submit</button>
       {word} <br />
-      {words.map((w) => (w.word))}
       {g} <br />
       {y}
     </div>
