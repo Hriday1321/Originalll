@@ -42,7 +42,7 @@ export default function Guess(props) {
     onSnapshot(q, (querySnapshot) => {
       setWords(querySnapshot.docs.map(doc => ({
         id: doc.id,
-        data: doc.data()
+        word: doc.data().word
       })))
     })
   },[])
