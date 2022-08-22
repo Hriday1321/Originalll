@@ -4,9 +4,9 @@ import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 
 export default function Guess() {
+  const [words, setWords] = React.useState([]);
   const [word, makeWord] = React.useState('initial');
-  const [g, makeg] = React.useState(0);
-  const [y, makey] = React.useState(0);
+  const [w, setw] = React.useState([]);
 
   const compare = () => {
     let arr = [0, 0, 0, 0, 0];
@@ -16,9 +16,7 @@ export default function Guess() {
         arr[i] = 1;
         count++;
       }
-    
-    makeg(count);
-    count = 0;
+    let county = 0;
     let barr = [...arr];
 
     for(let i = 0; i < 5; i++){
@@ -26,16 +24,12 @@ export default function Guess() {
         for(let j = 0; j < 5; j++){
           if(barr[j] === 0 && word[i] === words[0].word[j]){
             barr[j] = 1;
-            count++;
+            county++;
           }
         }
     }
-
-    makey(count);
-    count = 0;
+    setw([...w, {word: word, g: count, y: county}])
   }
-
-  const [words, setWords] = React.useState([])
 
   React.useEffect(() => {
     const q = query(collection(db, 'words'), orderBy('created', 'desc'))
@@ -47,14 +41,19 @@ export default function Guess() {
     })
   },[])
 
+
+
   return (
     <div className='guess'>
       <Nav />
       <input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></input>
-      <button onClick={() => {compare()}}>Submit</button>
-      {word} <br />
-      {g} <br />
-      {y}
+      <button onClick={() => {
+        if(word.length === 5)
+        compare();
+        }}>Submit</button>
+      {w.map(function(data){
+         return (<li>{data.word}  {data.g}  {data.y}</li>)
+       })}
     </div>
   )
 }
