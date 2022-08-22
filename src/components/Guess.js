@@ -3,7 +3,7 @@ import Nav from './Nav'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 
-export default function Guess(props) {
+export default function Guess() {
   const [word, makeWord] = React.useState('initial');
   const [g, makeg] = React.useState(0);
   const [y, makey] = React.useState(0);

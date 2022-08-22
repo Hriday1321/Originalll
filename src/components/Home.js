@@ -1,10 +1,9 @@
 import Nav from './Nav'
 
-function Home(props) {
+function Home() {
     return (
       <div className="Home">
         <Nav />
-        {props.words}
       </div>
     )
 }
