@@ -6,12 +6,16 @@ import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
 export default function Make() {
   const [word, makeWord] = React.useState('initial');
+  const [id, makeId] = React.useState(0);
   const update = async () => {
     if(word.length === 5){
       try {
         await addDoc(collection(db, 'words'), {
           word: word,
           created: Timestamp.now()
+        })
+        .then(function(docRef) {
+          makeId(docRef.id);
         })
       } catch (err) {
         alert(err)
@@ -26,6 +30,7 @@ export default function Make() {
         <button onClick={() => {update()}}>Submit</button>
       </div>
       {word} <br />
+      {id}
     </div>
   )
 }
