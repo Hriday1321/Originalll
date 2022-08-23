@@ -1,7 +1,4 @@
 import React from 'react'
-import Nav from './Nav'
-import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
-import {db} from './firebase'
 
 export default function Guess() {
   const [words, setWords] = React.useState([]);
@@ -31,21 +28,8 @@ export default function Guess() {
     setw([...w, {word: word, g: count, y: county}])
   }
 
-  React.useEffect(() => {
-    const q = query(collection(db, 'words'), orderBy('created', 'desc'))
-    onSnapshot(q, (querySnapshot) => {
-      setWords(querySnapshot.docs.map(doc => ({
-        id: doc.id,
-        word: doc.data().word
-      })))
-    })
-  },[])
-
-
-
   return (
     <div className='guess'>
-      <Nav />
       <input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></input>
       <button onClick={() => {
         if(word.length === 5)
