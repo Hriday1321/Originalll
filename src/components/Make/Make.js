@@ -1,6 +1,6 @@
 import React from 'react'
-import Nav from './Nav'
-import {db} from './firebase'
+import Nav from '../Nav/Nav'
+import {db} from '../firebase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom"
-import Home from './components/Home'
-import Make from './components/Make'
-import Id from './components/Id'
+import Home from './components/Home/Home'
+import Make from './components/Make/Make'
+import Id from './components/Guess/Id'
 
 function App() {
   return (

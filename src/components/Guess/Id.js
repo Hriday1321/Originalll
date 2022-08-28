@@ -1,7 +1,7 @@
 import React from 'react'
-import {db} from './firebase'
+import {db} from './../firebase'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
-import Nav from './Nav'
+import Nav from '../Nav/Nav'
 import Guess from './Guess'
 
 function Id() {
