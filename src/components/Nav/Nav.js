@@ -1,18 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Block, Button} from './Nav.elements'
 
 export default function Nav() {
   return (
-    <div>
-        <div className='home'>
-            <Link to={'/'}>Home</Link>
-        </div>
-        <div className="make">
-          <Link to={'/make'}>Make word</Link>
-        </div>
-        <div className="guess">
-          <Link to={'/guess'}>Guess word</Link>  
-        </div>
-    </div>
+    <Block>
+        <span className='home'>
+            <Button to={'/'}>Home</Button>
+        </span>
+        <span className="make">
+          <Button to={'/make'}>Make word</Button>
+        </span>
+        <span className="guess">
+          <Button to={'/guess'}>Guess word</Button>  
+        </span>
+    </Block>
   )
 }
