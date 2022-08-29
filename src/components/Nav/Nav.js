@@ -1,18 +1,18 @@
 import React from 'react'
-import { Block, Button} from './Nav.elements'
+import { Block, Button, Span } from './Nav.elements'
 
 export default function Nav() {
   return (
     <Block>
-        <span className='home'>
+        <Span className='home'>
             <Button to={'/'}>Home</Button>
-        </span>
-        <span className="make">
+        </Span>
+        <Span className="make">
           <Button to={'/make'}>Make word</Button>
-        </span>
-        <span className="guess">
+        </Span>
+        <Span className="guess">
           <Button to={'/guess'}>Guess word</Button>  
-        </span>
+        </Span>
     </Block>
   )
 }
