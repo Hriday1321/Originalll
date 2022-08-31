@@ -2,7 +2,7 @@ import React from 'react'
 import Home from '../Home/Home'
 import {db} from '../firebase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
-import { Input } from "./Make.elements"
+import { Input, Inputs, Button } from "./Make.elements"
 
 
 export default function Make() {
@@ -26,10 +26,10 @@ export default function Make() {
   return (
     <div className='make'>
       <Home />
-      <div className='inputs'>
+      <Inputs>
         <Input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></Input>
-        <button onClick={() => {update()}}>Submit</button>
-      </div>
+        <Button onClick={() => {update()}}>Submit</Button>
+      </Inputs>
       {word} <br />
       {id}
     </div>
