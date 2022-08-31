@@ -1,7 +1,7 @@
 import React from 'react'
 import {db} from './../firebase'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
-import Nav from '../Nav/Nav'
+import Home from '../Home/Home'
 import Guess from './Guess'
 
 function Id() {
@@ -30,7 +30,7 @@ function Id() {
     if(word === '')
       return (
         <div>
-            <Nav />
+            <Home />
             <input type='text' placeholder='Enter Text' onChange={ (e) => {makeID(e.target.value)}}></input>
             <button onClick={() => {
                 get();
@@ -44,7 +44,7 @@ function Id() {
     else
       return (
         <div>
-            <Nav />
+            <Home />
             <Guess word={word}/>
         </div>
       )

@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../Nav/Nav'
+import Home from '../Home/Home'
 import {db} from '../firebase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
@@ -24,7 +24,7 @@ export default function Make() {
   }
   return (
     <div className='make'>
-      <Nav />
+      <Home />
       <div className='inputs'>
         <input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></input>
         <button onClick={() => {update()}}>Submit</button>
