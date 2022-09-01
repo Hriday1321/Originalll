@@ -9,8 +9,7 @@ export const Input = styled.input`
     border-radius: 5px 0px 0px 5px;
     padding: 1%;
     font-weight: 500;
-    ::placeholder,
-    ::-webkit-input-placeholder {
+    ::placeholder {
     color: #1280b0;
     }
 `;
@@ -27,3 +26,10 @@ export const Button = styled.button`
     border: none;
     border-radius: 0px 5px 5px 0px;
 `;
+
+export const Code = styled.span`
+    background-color: white;
+    color: #1280b0;
+    padding: 1%;
+    border-radius: 5px;
+`
