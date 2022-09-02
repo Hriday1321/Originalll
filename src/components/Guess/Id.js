@@ -3,6 +3,7 @@ import {db} from './../firebase'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import Home from '../Home/Home'
 import Guess from './Guess'
+import {Inputs, Input, Button} from './Id.elements'
 
 function Id() {
     const [words, setWords] = React.useState([]);
@@ -33,12 +34,13 @@ function Id() {
       return (
         <div>
             <Home />
-            <input type='text' placeholder='Enter Text' onChange={ (e) => {makeID(e.target.value)}}></input>
-            <button onClick={() => {
-                get();
-            }}>Submit
-            </button>
-            {id}
+            <Inputs>
+              <Input type='text' placeholder='Enter Text' onChange={ (e) => {makeID(e.target.value)}}></Input>
+              <Button onClick={() => {
+                  get();
+              }}>Submit
+              </Button>
+            </Inputs>
             {words.map(function(data) {
             return (<li>{data.id}</li>);
             })}
