@@ -27,13 +27,27 @@ export default function Guess(props) {
     setw([...w, {word: word, g: count, y: county}])
   }
 
+  React.useEffect(() => {
+    const handleKeyDown = (event) => {
+      if((event.key >= 'a' && event.key <= 'z') || (event.key >= '0' && event.key <= '9') || (event.keyCode >= 65 && event.keyCode <= 90))
+        makeWord(word.concat(event.key));
+      else if(event.key === 'Backspace')
+        makeWord(word.slice(0, -1));
+      else if(event.key === 'Enter' && word.length === 5){
+        compare();
+        makeWord('');
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [word, w])
+
   return (
     <div className='guess'>
-      <input type='text' placeholder='Enter Text' onChange={ (e) => {makeWord(e.target.value)}}></input>
-      <button onClick={() => {
-        if(word.length === 5)
-          compare();
-        }}>Submit</button>
+        {word} <br />
       {w.map(function(data){
          return (<li>{data.word}  {data.g}  {data.y}</li>)
        })}

@@ -12,16 +12,6 @@ function Id() {
     
 
     React.useEffect(() => {
-      const handleKeyDown = (event) => {
-        if((event.key >= 'a' && event.key <= 'z'))
-          makeID(id.concat(event.key));
-        if((event.key >= '0' && event.key <= '9'))
-          makeID(id.concat(event.key));
-        if((event.keyCode >= 65 && event.keyCode <= 90))
-          makeID(id.concat(event.key));
-        else if(event.key === 'Backspace')
-          makeID(id.slice(0, -1));
-      };
         const q = query(collection(db, 'words'), orderBy('created', 'desc'))
         onSnapshot(q, (querySnapshot) => {
           setWords(querySnapshot.docs.map(doc => ({
@@ -29,11 +19,7 @@ function Id() {
             word: doc.data().word
           })))
         })
-        window.addEventListener('keydown', handleKeyDown);
-        return () => {
-          window.removeEventListener('keydown', handleKeyDown);
-        };
-    },[id])
+    },[])
 
     const get = () => {
         words.forEach(function (item) {
