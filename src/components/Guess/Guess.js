@@ -4,7 +4,7 @@ export default function Guess(props) {
   const [word, makeWord] = React.useState('initial');
   const [w, setw] = React.useState([]);
 
-  const compare = () => {
+  const compare = React.useCallback(() => {
     let arr = [0, 0, 0, 0, 0];
     let count = 0
     for(let i = 0; i < 5; i++)
@@ -25,7 +25,7 @@ export default function Guess(props) {
         }
     }
     setw([...w, {word: word, g: count, y: county}])
-  }
+  }, [word, props.word, w]);
 
   React.useEffect(() => {
     const handleKeyDown = (event) => {
@@ -43,7 +43,7 @@ export default function Guess(props) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [word, w])
+  }, [word, compare])
 
   return (
     <div className='guess'>
