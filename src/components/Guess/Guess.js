@@ -1,7 +1,8 @@
 import React from 'react'
+import { Cont } from './Guess.elements'
 
 export default function Guess(props) {
-  const [word, makeWord] = React.useState('initial');
+  const [word, makeWord] = React.useState('init');
   const [w, setw] = React.useState([]);
 
   const compare = React.useCallback(() => {
@@ -29,8 +30,10 @@ export default function Guess(props) {
 
   React.useEffect(() => {
     const handleKeyDown = (event) => {
-      if((event.key >= 'a' && event.key <= 'z') || (event.key >= '0' && event.key <= '9') || (event.keyCode >= 65 && event.keyCode <= 90))
-        makeWord(word.concat(event.key));
+      if((event.key >= 'a' && event.key <= 'z') || (event.key >= '0' && event.key <= '9') || (event.keyCode >= 65 && event.keyCode <= 90)){
+        if(word.length < 5)
+          makeWord(word.concat(event.key));
+      }    
       else if(event.key === 'Backspace')
         makeWord(word.slice(0, -1));
       else if(event.key === 'Enter' && word.length === 5){
@@ -49,7 +52,7 @@ export default function Guess(props) {
     <div className='guess'>
         {word} <br />
       {w.map(function(data){
-         return (<li>{data.word}  {data.g}  {data.y}</li>)
+         return (<Cont>{data.word}  {data.g}  {data.y}</Cont>)
        })}
     </div>
   )
