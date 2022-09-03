@@ -26,3 +26,22 @@ export const Button = styled.button`
     border: none;
     border-radius: 0px 5px 5px 0px;
 `;
+
+export const List = styled.div`
+    background-color: white;
+    color: #1280b0;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+`;
+
+export const Li = styled.li`
+    list-style: none;
+    text-align: center;
+    padding: 1%1%;
+    :nth-child(2n){
+        background-color: #1280b0;
+        color: white;
+        
+    }
+`;
