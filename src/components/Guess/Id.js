@@ -3,7 +3,7 @@ import {db} from './../firebase'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import Home from '../Home/Home'
 import Guess from './Guess'
-import {Inputs, Input, Button} from './Id.elements'
+import {Inputs, Input, Button, List, Li} from './Id.elements'
 
 function Id() {
     const [words, setWords] = React.useState([]);
@@ -41,9 +41,12 @@ function Id() {
               }}>Submit
               </Button>
             </Inputs>
-            {words.map(function(data) {
-            return (<li>{data.id}</li>);
-            })}
+            <List>
+              {words.map(function(data) {
+                return (<Li>{data.id}</Li>);
+              })}
+              <Li>Waiting on your friend? Try one of these while you wait!</Li>
+            </List>
         </div>
       )
     else
