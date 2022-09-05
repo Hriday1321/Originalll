@@ -8,9 +8,9 @@ export default function Guess(props) {
 
   const compare = React.useCallback(() => {
     let arr = [0, 0, 0, 0, 0];
-    let count = 0
+    let count = 0;
     for(let i = 0; i < 5; i++)
-      if(word[i] === props.word[i]){
+      if(word[i].toUpperCase() === props.word[i].toUpperCase()){
         arr[i] = 1;
         count++;
       }
@@ -20,7 +20,7 @@ export default function Guess(props) {
     for(let i = 0; i < 5; i++){
       if(arr[i] === 0)
         for(let j = 0; j < 5; j++){
-          if(barr[j] === 0 && word[i] === props.word[j]){
+          if(barr[j] === 0 && word[i].toUpperCase() === props.word[j].toUpperCase()){
             barr[j] = 1;
             county++;
           }

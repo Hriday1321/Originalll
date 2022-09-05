@@ -21,6 +21,7 @@ export const Letter = styled.span`
     font-size: 2em;
     font-weight: 600;
     margin: 1%;
+    text-transform: uppercase;
 `;
 
 export const Div = styled.div`
