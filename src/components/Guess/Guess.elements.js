@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Cont = styled.div`
     display: flex;
+    padding: 0.5% 0 0.5% 0;
     background-color: white;
     width: 50%;
     height: 100px;
@@ -24,4 +25,5 @@ export const Letter = styled.span`
 
 export const Div = styled.div`
     margin: 1% 0;
+    padding: 1% 0;
 `;
