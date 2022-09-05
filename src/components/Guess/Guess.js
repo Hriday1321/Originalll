@@ -1,5 +1,5 @@
 import React from 'react'
-import { Cont, Letter } from './Guess.elements'
+import { Cont, Letter, Div } from './Guess.elements'
 
 export default function Guess(props) {
   const [word, makeWord] = React.useState('init');
@@ -49,10 +49,7 @@ export default function Guess(props) {
   }, [word, compare])
 
   return (
-    <div className='guess'>
-        {word.split('').map(function(data){
-          return (<Letter>{data}</Letter>)
-        })} <br />
+    <Div className='guess'>    
       {w.map(function(data){
          return (<Cont>
          {data.word.split('').map(function(l){
@@ -61,6 +58,11 @@ export default function Guess(props) {
          <Letter>{data.g}</Letter>  
          <Letter>{data.y}</Letter></Cont>)
        })}
-    </div>
+       <Cont>
+        {word.split('').map(function(data){
+          return (<Letter>{data}</Letter>)
+        })}
+       </Cont>
+    </Div>
   )
 }
