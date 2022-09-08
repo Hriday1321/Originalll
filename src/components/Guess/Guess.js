@@ -64,10 +64,10 @@ export default function Guess(props) {
           return (<Letter>{data}</Letter>)
         })}
         {empty.map(function(){
-          return (<Letter>_</Letter>)
+          return (<Letter> </Letter>)
         })}
-        <Letter>_</Letter>
-        <Letter>_</Letter>
+        <Letter> </Letter>
+        <Letter> </Letter>
        </Cont>
     </Div>
   )

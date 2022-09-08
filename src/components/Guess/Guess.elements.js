@@ -3,15 +3,16 @@ import styled from 'styled-components'
 export const Cont = styled.div`
     display: flex;
     padding: 0.5% 0 0.5% 0;
-    background-color: white;
+    background-color: #999;
     width: 50%;
-    height: 100px;
+    height: 90px;
     margin: 0 auto;
     justify-content: center;
 `;
 
 export const Letter = styled.span`
-    background-color: #1280b0;
+    background-color: #999;
+    border: solid white;
     border-radius: 5px;
     color: white;
     width: 10%;

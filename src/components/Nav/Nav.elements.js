@@ -9,7 +9,7 @@ export const Block = styled.div`
 `;
 
 export const Button = styled(Link)`
-    color: #0d5878;
+    color: rgb(136, 156, 186);
     text-decoration: none;
     font-weight:  600;
 `;
@@ -22,7 +22,7 @@ export const Span = styled.span`
     justify-content: center;
     transition: 0.5s;
     &:hover{
-        background-color: #0d5878;
+        background-color: rgb(136, 156, 186);
         border-radius: 5px;
     }
     &:hover ${Button}{
