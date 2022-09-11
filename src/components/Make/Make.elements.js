@@ -2,15 +2,16 @@ import styled from "styled-components"
 
 export const Input = styled.input`
     border: none;
-    background-color: white;
-    color: #1280b0;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #606e71;
     outline: none;
     box-sizing: border-box;
     border-radius: 5px 0px 0px 5px;
     padding: 1%;
     font-weight: 500;
     ::placeholder {
-    color: #1280b0;
+    color: #606e71;
     }
 `;
 
@@ -22,14 +23,14 @@ export const Inputs = styled.div`
 
 export const Button = styled.button`
     color: white;
-    background-color: #1280b0;
+    background-color: #606e71;
     border: none;
     border-radius: 0px 5px 5px 0px;
 `;
 
 export const Code = styled.span`
-    background-color: white;
-    color: #1280b0;
+    background-color: #606e71;
+    color: white;
     padding: 1%;
     border-radius: 5px;
 `

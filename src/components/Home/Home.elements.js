@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Div = styled.div`
-    background-color: rgb(232, 236, 240);
-    color: rgb(24, 46, 79);
+    background-color: #E6EDEC;
+    color: #444;
     font-weight: 700;
     font-size: 2em;
     text-align: center;

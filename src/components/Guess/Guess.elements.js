@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Cont = styled.div`
     display: flex;
     padding: 0.5% 0 0.5% 0;
-    background-color: #999;
+    background-color: rgb(232, 236, 240);
     width: 50%;
     height: 90px;
     margin: 0 auto;
@@ -11,10 +11,10 @@ export const Cont = styled.div`
 `;
 
 export const Letter = styled.span`
-    background-color: #999;
-    border: solid white;
+    background-color: rgb(232, 236, 240);
+    border: solid rgb(247, 120, 97);
     border-radius: 5px;
-    color: white;
+    color: rgb(247, 100, 77);
     width: 10%;
     display: flex;
     justify-content: center;
