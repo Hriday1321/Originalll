@@ -1,10 +1,10 @@
 import Nav from '../Nav/Nav'
-import { Div } from "./Home.elements"
+import { Div, Back } from "./Home.elements"
 
 function Home() {
     return (
       <div className="Home">
-        <Div>Mastordle</Div>
+        <Div><Back>Mastordle</Back></Div>
         <Nav />
       </div>
     )
