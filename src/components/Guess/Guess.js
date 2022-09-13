@@ -1,10 +1,11 @@
 import React from 'react'
-import { Cont, Letter, Div } from './Guess.elements'
+import { Cont, Letter, Div, LetterF } from './Guess.elements'
 
 export default function Guess(props) {
   const [word, makeWord] = React.useState('');
   const [w, setw] = React.useState([]);
-  const empty = Array.from(Array(5 - word.length))
+  const empty = Array.from(Array(5 - word.length));
+  const fill = Array.from(Array(5));
 
   const compare = React.useCallback(() => {
     let arr = [0, 0, 0, 0, 0];
@@ -54,10 +55,10 @@ export default function Guess(props) {
       {w.map(function(data){
          return (<Cont>
          {data.word.split('').map(function(l){
-          return (<Letter>{l}</Letter>)
+          return (<LetterF>{l}</LetterF>)
          })}
-         <Letter>{data.g}</Letter>  
-         <Letter>{data.y}</Letter></Cont>)
+         <LetterF>{data.g}</LetterF>  
+         <LetterF>{data.y}</LetterF></Cont>)
        })}
        <Cont>
         {word.split('').map(function(data){
@@ -69,6 +70,18 @@ export default function Guess(props) {
         <Letter> </Letter>
         <Letter> </Letter>
        </Cont>
+
+
+      {w.length < 7? (<>{Array.from(Array(7 - w.length)).map(function(){
+        return(<Cont>
+          {fill.map(function(){
+            return(<Letter />)
+          })}
+          <Letter />
+          <Letter />
+        </Cont>)
+      })}
+      </>): null}
     </Div>
   )
 }

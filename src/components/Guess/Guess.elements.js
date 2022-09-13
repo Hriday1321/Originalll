@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Cont = styled.div`
     display: flex;
     padding: 0.5% 0 0.5% 0;
-    background-color: rgb(232, 236, 240);
+    background-color: #7C95A1;
     width: 50%;
     height: 90px;
     margin: 0 auto;
@@ -11,10 +11,25 @@ export const Cont = styled.div`
 `;
 
 export const Letter = styled.span`
-    background-color: rgb(232, 236, 240);
-    border: solid rgb(247, 120, 97);
+    background-color: #7C95A1;
+    border: solid white;
     border-radius: 5px;
-    color: rgb(247, 100, 77);
+    color: white;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 1%;
+    text-transform: uppercase;
+`;
+
+export const LetterF = styled.span`
+    background-color: white;
+    border: solid white;
+    border-radius: 5px;
+    color: #7C95A1;
     width: 10%;
     display: flex;
     justify-content: center;
