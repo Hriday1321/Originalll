@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Div = styled.div`
-    background-color: #E6EDEC;
+    background-color: #f8fcff;
     font-weight: 700;
     font-size: 2em;
     text-align: center;
