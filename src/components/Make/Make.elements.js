@@ -19,7 +19,8 @@ export const Input = styled.input`
 export const Inputs = styled.div`
     display: flex;
     justify-content: center;
-    margin: 1%;
+    width: 50%;
+    margin: 1% auto;
 `;
 
 export const Button = styled.button`
