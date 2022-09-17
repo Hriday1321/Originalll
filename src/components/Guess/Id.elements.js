@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const Input = styled.input`
-    border: none;
+    border: solid #999 1px;
+    border-right: none;
     width: 30%;
     background-color: white;
     color: #666;
@@ -22,8 +23,9 @@ export const Inputs = styled.div`
 
 export const Button = styled.button`
     color: white;
-    background-color: #666;
-    border: none;
+    background-color: #7C95A1;
+    border: solid #999;
+    border-width: 1px;
     border-radius: 0px 5px 5px 0px;
 `;
 
@@ -37,7 +39,7 @@ export const List = styled.div`
 `;
 
 export const Div = styled.div`
-    background-color: #7C95A1;
+    background-color: #f8fcff;
     width: 70%;
     margin: 2% auto;
     padding: 2%2%;
@@ -48,9 +50,10 @@ export const Li = styled.li`
     list-style: none;
     text-align: center;
     padding: 1%1%;
+    border: solid #999 1px;
     :nth-child(2n){
-        background-color: #666;
+        background-color: #7C95A1;
         color: white;
-        
+        border-top: none;
     }
 `;
