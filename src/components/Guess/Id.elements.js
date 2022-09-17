@@ -8,7 +8,7 @@ export const Input = styled.input`
     color: #666;
     outline: none;
     box-sizing: border-box;
-    border-radius: 5px 0px 0px 5px;
+    border-radius: 2px 0px 0px 2px;
     padding: 1%;
     font-weight: 500;
     ::placeholder {
@@ -26,7 +26,7 @@ export const Button = styled.button`
     background-color: #7C95A1;
     border: solid #999;
     border-width: 1px;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 2px 2px 0px;
 `;
 
 export const List = styled.div`
