@@ -1,5 +1,5 @@
 import React from 'react'
-import { Cont, Letter, Div, LetterF } from './Guess.elements'
+import { Cont, Letter, Div, LetterF, LetterG, LetterY } from './Guess.elements'
 
 export default function Guess(props) {
   const [word, makeWord] = React.useState('');
@@ -57,8 +57,8 @@ export default function Guess(props) {
          {data.word.split('').map(function(l){
           return (<LetterF>{l}</LetterF>)
          })}
-         <LetterF>{data.g}</LetterF>  
-         <LetterF>{data.y}</LetterF></Cont>)
+         <LetterG>{data.g}</LetterG>  
+         <LetterY>{data.y}</LetterY></Cont>)
        })}
        <Cont>
         {word.split('').map(function(data){
@@ -67,8 +67,8 @@ export default function Guess(props) {
         {empty.map(function(){
           return (<Letter> </Letter>)
         })}
-        <Letter> </Letter>
-        <Letter> </Letter>
+        <LetterG> </LetterG>
+        <LetterY> </LetterY>
        </Cont>
 
 
@@ -77,8 +77,8 @@ export default function Guess(props) {
           {fill.map(function(){
             return(<Letter />)
           })}
-          <Letter />
-          <Letter />
+          <LetterG />
+          <LetterY />
         </Cont>)
       })}
       </>): null}
