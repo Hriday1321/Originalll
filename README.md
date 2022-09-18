@@ -8,8 +8,8 @@ Development has ended for the most part.
 
 ## Milestones
 
-Integrate two player interaction CHECK
-Integrate database and code system CHECK
-Have word be viewable CHECK
-Have word be guessable CHECK
+Integrate two player interaction CHECK  
+Integrate database and code system CHECK  
+Have word be viewable CHECK  
+Have word be guessable CHECK  
 Front end work FINALLYY DONEEEE
