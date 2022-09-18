@@ -4,12 +4,12 @@ A two player take on the popular word game wordle. Players can play against each
 
 ### Stage
 
-Currently development has started as of 18-07-22 but no significant progress has been made
+Development has ended for the most part.
 
 ## Milestones
 
-Integrate two player interaction
-Integrate database and code system
-Have word be viewable
-Have word be guessable
-Front end work
+Integrate two player interaction CHECK
+Integrate database and code system CHECK
+Have word be viewable CHECK
+Have word be guessable CHECK
+Front end work FINALLYY DONEEEE
