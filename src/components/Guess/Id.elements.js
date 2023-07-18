@@ -39,7 +39,8 @@ export const List = styled.div`
 `;
 
 export const Div = styled.div`
-    background-color: #f8fcff;
+    background-color: rgb(18,19,19);
+    /* background-color: #f8fcff; */
     width: 70%;
     margin: 2% auto;
     padding: 2%2%;
