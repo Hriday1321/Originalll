@@ -4,9 +4,6 @@ import { Block, Button, Span } from './Nav.elements'
 export default function Nav() {
   return (
     <Block>
-        <Span className='home'>
-            <Button to={'/'}>Home</Button>
-        </Span>
         <Span className="make">
           <Button to={'/make'}>Make word</Button>
         </Span>

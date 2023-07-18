@@ -4,8 +4,10 @@ import { Div, Back } from "./Home.elements"
 function Home() {
     return (
       <div className="Home">
-        <Div><Back>Mastordle</Back></Div>
-        <Nav />
+        <Div>
+          <Back>Mastordle</Back>
+          <Nav />
+        </Div> 
       </div>
     )
 }
