@@ -26,6 +26,7 @@ export const Span = styled.span`
     display: flex;
     flex: .15;
     align-items: center;
+    border-radius: 5px;
     justify-content: center;
     transition: 0.5s;
     &:hover{

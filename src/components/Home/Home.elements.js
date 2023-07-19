@@ -10,7 +10,7 @@ export const Div = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid #444 2px;
+    border-bottom: solid rgb(218,235,255) 2px;
 `;
 
 export const Back = styled.p`

@@ -5,7 +5,8 @@ export const Input = styled.input`
     border-right: none;
     text-transform: uppercase;
     background-color: white;
-    color: #666;
+    flex: 0.4;
+    color: rgb(18,19,19);
     outline: none;
     box-sizing: border-box;
     border-radius: 2px 0px 0px 2px;
@@ -24,14 +25,16 @@ export const Inputs = styled.div`
 `;
 
 export const Button = styled.button`
-    color: white;
-    background-color: #7C95A1;
+    color: rgb(18,19,19);
+    /* background-color: #7C95A1; */
+    background-color: rgb(218,235,255);
+    padding: 1%;
     border: solid #999 1px;
     border-radius: 0px 2px 2px 0px;
 `;
 
 export const Code = styled.span`
-    background-color: #7C95A1;
-    color: white;
+    background-color: rgb(218,235,255);
+    color: rgb(18,19,19);
     padding: 1%;
 `
