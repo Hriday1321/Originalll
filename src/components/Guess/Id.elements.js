@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Input = styled.input`
     border: solid #999 1px;
     border-right: none;
-    width: 30%;
+    width: 60%;
     background-color: white;
     color: #666;
     outline: none;
@@ -22,8 +22,9 @@ export const Inputs = styled.div`
 `;
 
 export const Button = styled.button`
-    color: white;
-    background-color: #7C95A1;
+    color: rgb(18,19,19);
+    background-color: rgb(218,235,255);
+    width: 20%;
     border: solid #999;
     border-width: 1px;
     border-radius: 0px 2px 2px 0px;
@@ -53,8 +54,9 @@ export const Li = styled.li`
     padding: 1%1%;
     border: solid #999 1px;
     :nth-child(2n){
-        background-color: #7C95A1;
-        color: white;
+        background-color: rgb(218,235,255);
+        color: rgb(18,19,19);
         border-top: none;
+        border-bottom: none;
     }
 `;

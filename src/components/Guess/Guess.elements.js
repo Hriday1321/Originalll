@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 export const Cont = styled.div`
     display: flex;
     padding: 0.5% 0 0.5% 0;
-    background-color: #8CA5B1;
+    /* background-color: #8CA5B1; */
     width: 40%;
     height: 80px;
     margin: 0 auto;
@@ -30,13 +30,13 @@ const colorChange = keyframes`
         background-color: inherit;}
     100% {background-color: white;
         border: solid white 2px;
-        color: #7C95A1;}
+        color: rgb(18,19,19);}
 `;
 
 export const LetterF = styled.span`
     background-color: white;
     border: solid white 2px;
-    color: #7C95A1;
+    color: rgb(18,19,19);
     border-radius: 5px;
     width: 10%;
     display: flex;
